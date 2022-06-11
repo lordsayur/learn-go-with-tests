@@ -15,7 +15,7 @@ func TestSearch(t *testing.T) {
 	t.Run("Unknown word", func(t *testing.T) {
 		_, got := dictionary.Search("unknown")
 
-		assertError(t, got, errNotFound)
+		assertError(t, got, ErrNotFound)
 	})
 }
 
@@ -37,7 +37,7 @@ func TestAdd(t *testing.T) {
 		dictionary := Dictionary{word: definition}
 		err := dictionary.Add(word, "new test")
 
-		assertError(t, err, errWordExists)
+		assertError(t, err, ErrWordExists)
 		assertDefinition(t, dictionary, word, definition)
 	})
 
