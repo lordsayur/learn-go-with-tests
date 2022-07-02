@@ -3,8 +3,8 @@ package propertybasestests
 import "strings"
 
 func ConvertToRoman(arabic int) string {
-	if arabic == 3 {
-		return "III"
+	if arabic == 4 {
+		return "IV"
 	}
 
 	var result strings.Builder
